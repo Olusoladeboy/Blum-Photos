@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Blum - Photos</title>
+</head>
+<body>
+    <p>Hello</p>
+    <p>I'm Working!</p>
+    <a href="http://localhost:2000/images">See JSON data here</a>
+    <% photo.forEach((photo) => { %>
+        <p>Caption: <%= photo.alt_description %></p>
+        <p>Likes: <%= photo.likes %></p>
+        <p>Uploaded By: <%= photo.user.instagram_username %></p>
+        <img src="<%= photo.urls.small %>" alt="<%= photo.alt_description %>">
+        <!-- <a style="display: block;" href="<%= photo.urls.raw %>">Images</a> -->
+    <% }) %>
+</body>
+</html>
